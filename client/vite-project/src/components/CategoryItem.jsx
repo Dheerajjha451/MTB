@@ -1,20 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
-`
+`;
 
-const CategoryItem = ({item}) => {
-    return (
-        <Container>
-            <ImageContainer>
-                <Image src = {item.img} />
-            </ImageContainer>
-            <InfoConatiner>
-                <Title> {item.name} </Title>
-            </InfoConatiner>
-        </Container>
-    )
-}
+const ImageContainer = styled.div`
+`;
 
-export default CategoryItem
+const Image = styled.img`
+  width: 200px; 
+  row-gap: initial;
+  height: 200px; 
+`;
+
+const InfoContainer = styled.div`
+`;
+
+const Title = styled.h2`
+`;
+
+const CategoryItem = ({ item }) => {
+  return (
+    <Container>
+      <ImageContainer>
+        <Image src={item.img} alt={item.name} />
+      </ImageContainer>
+      <InfoContainer>
+        <Title>{item.name}</Title>
+      </InfoContainer>
+    </Container>
+  );
+};
+
+export default CategoryItem;
